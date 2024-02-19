@@ -12,9 +12,12 @@
 		0C7D3C8B2B7A87BC0039C0F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C7D3C892B7A87BC0039C0F6 /* Main.storyboard */; };
 		0C7D3C8D2B7A87BD0039C0F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C7D3C8C2B7A87BD0039C0F6 /* Assets.xcassets */; };
 		0C7D3C982B7A88790039C0F6 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7D3C972B7A88790039C0F6 /* MainTableViewController.swift */; };
-		0C7D3C9F2B7A8BD80039C0F6 /* Dict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7D3C9E2B7A8BD80039C0F6 /* Dict.swift */; };
+		0C7D3C9F2B7A8BD80039C0F6 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7D3C9E2B7A8BD80039C0F6 /* Word.swift */; };
 		0C7D3CA12B7ABA090039C0F6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7D3CA02B7ABA090039C0F6 /* DetailViewController.swift */; };
 		0CA5677C2B7BC65E00642E7E /* NewWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5677B2B7BC65E00642E7E /* NewWordViewController.swift */; };
+		0CA5677E2B7C130500642E7E /* WordsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5677D2B7C130500642E7E /* WordsDelegate.swift */; };
+		0CA567822B7FB67E00642E7E /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA567812B7FB67E00642E7E /* Section.swift */; };
+		0CA567842B7FBFC400642E7E /* SectionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA567832B7FBFC400642E7E /* SectionRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,9 +28,12 @@
 		0C7D3C8C2B7A87BD0039C0F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C7D3C912B7A87BD0039C0F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C7D3C972B7A88790039C0F6 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
-		0C7D3C9E2B7A8BD80039C0F6 /* Dict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dict.swift; sourceTree = "<group>"; };
+		0C7D3C9E2B7A8BD80039C0F6 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		0C7D3CA02B7ABA090039C0F6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		0CA5677B2B7BC65E00642E7E /* NewWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWordViewController.swift; sourceTree = "<group>"; };
+		0CA5677D2B7C130500642E7E /* WordsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsDelegate.swift; sourceTree = "<group>"; };
+		0CA567812B7FB67E00642E7E /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		0CA567832B7FBFC400642E7E /* SectionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SectionRepository.swift; path = ../../SectionRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +87,10 @@
 		0C7D3C9A2B7A8ABD0039C0F6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0C7D3C9E2B7A8BD80039C0F6 /* Dict.swift */,
+				0CA5677D2B7C130500642E7E /* WordsDelegate.swift */,
+				0C7D3C9E2B7A8BD80039C0F6 /* Word.swift */,
+				0CA567832B7FBFC400642E7E /* SectionRepository.swift */,
+				0CA567812B7FB67E00642E7E /* Section.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -183,11 +192,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CA567842B7FBFC400642E7E /* SectionRepository.swift in Sources */,
+				0CA5677E2B7C130500642E7E /* WordsDelegate.swift in Sources */,
 				0C7D3C842B7A87BC0039C0F6 /* AppDelegate.swift in Sources */,
-				0C7D3C9F2B7A8BD80039C0F6 /* Dict.swift in Sources */,
+				0C7D3C9F2B7A8BD80039C0F6 /* Word.swift in Sources */,
 				0C7D3CA12B7ABA090039C0F6 /* DetailViewController.swift in Sources */,
 				0C7D3C982B7A88790039C0F6 /* MainTableViewController.swift in Sources */,
 				0C7D3C862B7A87BC0039C0F6 /* SceneDelegate.swift in Sources */,
+				0CA567822B7FB67E00642E7E /* Section.swift in Sources */,
 				0CA5677C2B7BC65E00642E7E /* NewWordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

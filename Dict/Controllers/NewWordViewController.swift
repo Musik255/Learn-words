@@ -7,24 +7,44 @@
 
 import UIKit
 
-class NewWordViewController: UIViewController {
+class NewWordViewController: UIViewController/*, WordsDelegate*/{
 
+    @IBOutlet weak var englishTextField: UITextField!
+    
+    @IBOutlet weak var russianTextField: UITextField!
+    weak var delegate : MainTableViewController?
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        navigationItem.hidesBackButton = true
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: nil)
+
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func doneTapped(_ sender: Any) {
+        guard let englishText = englishTextField.text, englishText != "" else {
+            alertEmptyTextField(with: "English word")
+            return }
+        guard let russianText = russianTextField.text, russianText != "" else {
+            alertEmptyTextField(with: "Перевод на русский")
+            return }
+        let newWord = Word(engWord: englishText, rusWord: russianText)
+        addNew(word: newWord)
+        navigationController?.popViewController(animated: true)
     }
-    */
+    
+    func addNew(word: Word) {
+        delegate?.addNew(word: word)
+    }
+    
+    func alertEmptyTextField(with name : String){
+        let alertController = UIAlertController(title: "Поле не заполнено", message: "Заполните поле \(name)", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Заполнить", style: .cancel))
+        present(alertController, animated: true)
+    }
+
+    
 
 }
